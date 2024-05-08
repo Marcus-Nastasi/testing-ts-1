@@ -8,16 +8,36 @@
 </head>
 <body>
    <header class="w-screen h-28 p-10 flex items-center justify-center bg-slate-700 text-slate-200">
-      <section id="secHeaderTop">
-         
-      </section>
+      <section id="secHeaderTop"></section>
    </header>
 
    <section class="w-screen h-screen bg-green-800">
       <section class="flex flex-col justify-center items-center w-screen p-5">
          <h2 class=" text-4xl text-slate-300">Calculator</h2>
 
-         <section id="calculatorSec">
+         <section id="inputCalculatorSec" class="flex flex-col mt-7">
+            <label class="p-3 text-slate-300" for="inputNumbers">Numbers (1, 2, 3, 4, 5...):</label>
+            <input 
+               class="indent-2 outline-none bg-slate-100 rounded-lg focus:bg-slate-200" 
+               type="text" 
+               name="inputNumbers" 
+               id="inputNumbers"
+            />
+            <button class="bg-slate-300 mt-2.5 rounded-md hover:bg-slate-400" type="button">
+               sum
+            </button>
+            <button class="bg-slate-300 mt-2.5 rounded-md hover:bg-slate-400" type="button">
+               sub
+            </button>
+            <button class="bg-slate-300 mt-2.5 rounded-md hover:bg-slate-400" type="button">
+               mult
+            </button>
+            <button class="bg-slate-300 mt-2.5 rounded-md hover:bg-slate-400" type="button">
+               divs
+            </button>
+         </section>
+
+         <section id="outputCalculatorSec">
          </section>         
       </section>
    </section>
