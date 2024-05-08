@@ -1,7 +1,7 @@
-const [ sum, sub, mult, divs, inp ]: any = [
+const [ sum, sub, mult, divs, inp, clean ]: any = [
    document.getElementById('sumCalculator'), document.getElementById('subCalculator'),
    document.getElementById('multCalculator'), document.getElementById('divsCalculator'),
-   document.getElementById('inputNumbers')
+   document.getElementById('inputNumbers'), document.getElementById('cleanCalculator')
 ];
 
 function calculator(numbers: Array<number>, operation: number): number {
@@ -15,6 +15,7 @@ function calculator(numbers: Array<number>, operation: number): number {
 function handleImpression(value: number, operation: number): void {
    const sec: HTMLElement = document.getElementById('outputCalculatorSec');
    const p: HTMLParagraphElement = document.createElement('p');
+   p.classList.add('psCalcResult');
    let op: string; 
    switch(operation) {
       case 1: op = `Sum: ${value}`;
@@ -27,7 +28,7 @@ function handleImpression(value: number, operation: number): void {
          break;
       default: op = `Error in operation.`;
    }
-   if(op !== null || op !== undefined) p.innerText = op;
+   if(op !== null || op !== undefined) p.innerText += op;
    sec.appendChild(p);
 };
 
@@ -50,4 +51,6 @@ divs.onclick = () => {
    const arr: Array<number> = inp.value.split(',').map((v: string) => Number(v));
    handleImpression(calculator(arr, 4), 4);
 };
+
+clean.onclick = () => document.getElementById('outputCalculatorSec').innerHTML = '';
 

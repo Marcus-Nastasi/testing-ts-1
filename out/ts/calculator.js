@@ -1,7 +1,7 @@
-const [sum, sub, mult, divs, inp] = [
+const [sum, sub, mult, divs, inp, clean] = [
     document.getElementById('sumCalculator'), document.getElementById('subCalculator'),
     document.getElementById('multCalculator'), document.getElementById('divsCalculator'),
-    document.getElementById('inputNumbers')
+    document.getElementById('inputNumbers'), document.getElementById('cleanCalculator')
 ];
 function calculator(numbers, operation) {
     if (operation === 1)
@@ -18,6 +18,7 @@ function calculator(numbers, operation) {
 function handleImpression(value, operation) {
     const sec = document.getElementById('outputCalculatorSec');
     const p = document.createElement('p');
+    p.classList.add('psCalcResult');
     let op;
     switch (operation) {
         case 1:
@@ -35,7 +36,7 @@ function handleImpression(value, operation) {
         default: op = `Error in operation.`;
     }
     if (op !== null || op !== undefined)
-        p.innerText = op;
+        p.innerText += op;
     sec.appendChild(p);
 }
 ;
@@ -55,4 +56,5 @@ divs.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
     handleImpression(calculator(arr, 4), 4);
 };
+clean.onclick = () => document.getElementById('outputCalculatorSec').innerHTML = '';
 //# sourceMappingURL=calculator.js.map
