@@ -15,7 +15,6 @@ function calculator(numbers: Array<number>, operation: number): number {
 function handleImpression(value: number, operation: number): void {
    const sec: HTMLElement = document.getElementById('outputCalculatorSec');
    const p: HTMLParagraphElement = document.createElement('p');
-   p.classList.add('psCalcResult');
    let op: string; 
    switch(operation) {
       case 1: op = `Sum: ${value}`;
@@ -32,22 +31,34 @@ function handleImpression(value: number, operation: number): void {
    sec.appendChild(p);
 };
 
+function handleError(msg: string): void {
+   const sec: HTMLElement = document.getElementById('outputCalculatorSec');
+   const p: HTMLParagraphElement = document.createElement('p');
+   p.innerText = `Erro: ${msg}`;
+   sec.appendChild(p);
+   setTimeout(() => sec.removeChild(p), 2000);
+};
+
 sum.onclick = () => {
+   if(inp.value.length === 0) return handleError('preencha algum número');
    const arr: Array<number> = inp.value.split(',').map((v: string) => Number(v));
    handleImpression(calculator(arr, 1), 1);
 };
 
 sub.onclick = () => {
+   if(inp.value.length === 0) return handleError('preencha algum número');
    const arr: Array<number> = inp.value.split(',').map((v: string) => Number(v));
    handleImpression(calculator(arr, 2), 2);
 };
 
 mult.onclick = () => {
+   if(inp.value.length === 0) return handleError('preencha algum número');
    const arr: Array<number> = inp.value.split(',').map((v: string) => Number(v));
    handleImpression(calculator(arr, 3), 3);
 };
 
 divs.onclick = () => {
+   if(inp.value.length === 0) return handleError('preencha algum número');
    const arr: Array<number> = inp.value.split(',').map((v: string) => Number(v));
    handleImpression(calculator(arr, 4), 4);
 };

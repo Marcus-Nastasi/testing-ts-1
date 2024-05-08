@@ -18,7 +18,6 @@ function calculator(numbers, operation) {
 function handleImpression(value, operation) {
     const sec = document.getElementById('outputCalculatorSec');
     const p = document.createElement('p');
-    p.classList.add('psCalcResult');
     let op;
     switch (operation) {
         case 1:
@@ -40,19 +39,35 @@ function handleImpression(value, operation) {
     sec.appendChild(p);
 }
 ;
+function handleError(msg) {
+    const sec = document.getElementById('outputCalculatorSec');
+    const p = document.createElement('p');
+    p.innerText = `Erro: ${msg}`;
+    sec.appendChild(p);
+    setTimeout(() => sec.removeChild(p), 2000);
+}
+;
 sum.onclick = () => {
+    if (inp.value.length === 0)
+        return handleError('preencha algum número');
     const arr = inp.value.split(',').map((v) => Number(v));
     handleImpression(calculator(arr, 1), 1);
 };
 sub.onclick = () => {
+    if (inp.value.length === 0)
+        return handleError('preencha algum número');
     const arr = inp.value.split(',').map((v) => Number(v));
     handleImpression(calculator(arr, 2), 2);
 };
 mult.onclick = () => {
+    if (inp.value.length === 0)
+        return handleError('preencha algum número');
     const arr = inp.value.split(',').map((v) => Number(v));
     handleImpression(calculator(arr, 3), 3);
 };
 divs.onclick = () => {
+    if (inp.value.length === 0)
+        return handleError('preencha algum número');
     const arr = inp.value.split(',').map((v) => Number(v));
     handleImpression(calculator(arr, 4), 4);
 };
