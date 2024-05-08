@@ -3,9 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "ts": "tsc src/index.ts"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC"
 }
