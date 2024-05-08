@@ -6,3 +6,7 @@ function calculator(numbers: Array<number>, operation: number): number {
    return 0;
 };
 
+const nmbrs: Array<number> = [10, 10, 14, 15];
+
+console.log(calculator(nmbrs, 1));
+
