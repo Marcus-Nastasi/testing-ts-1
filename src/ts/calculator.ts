@@ -8,5 +8,5 @@ function calculator(numbers: Array<number>, operation: number): number {
 
 const nmbrs: Array<number> = [10, 10, 14, 15];
 
-console.log(calculator(nmbrs, 1));
+console.log(calculator(nmbrs, 3).toFixed(2));
 

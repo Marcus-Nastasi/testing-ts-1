@@ -12,5 +12,5 @@ function calculator(numbers, operation) {
 }
 ;
 const nmbrs = [10, 10, 14, 15];
-console.log(calculator(nmbrs, 1));
+console.log(calculator(nmbrs, 3).toFixed(2));
 //# sourceMappingURL=calculator.js.map
