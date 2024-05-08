@@ -12,5 +12,8 @@ function calculator(numbers, operation) {
 }
 ;
 const nmbrs = [10, 10, 14, 15];
-console.log(calculator(nmbrs, 3).toFixed(2));
+console.log("soma: " + calculator(nmbrs, 1).toFixed(2));
+console.log("subtração: " + calculator(nmbrs, 2).toFixed(2));
+console.log("multiplicação: " + calculator(nmbrs, 3).toFixed(2));
+console.log("divisão: " + calculator(nmbrs, 4).toFixed(2));
 //# sourceMappingURL=calculator.js.map
