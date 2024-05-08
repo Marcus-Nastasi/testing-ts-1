@@ -1,7 +1,7 @@
 "use strict";
 const [sum, sub, mult, divs, inp] = [
     document.getElementById('sumCalculator'), document.getElementById('subCalculator'),
-    document.getElementById('multCalculator'), document.getElementById('divisCalculator'),
+    document.getElementById('multCalculator'), document.getElementById('divsCalculator'),
     document.getElementById('inputNumbers')
 ];
 function calculator(numbers, operation) {
@@ -19,5 +19,17 @@ function calculator(numbers, operation) {
 sum.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
     console.log(calculator(arr, 1));
+};
+sub.onclick = () => {
+    const arr = inp.value.split(',').map((v) => Number(v));
+    console.log(calculator(arr, 2));
+};
+mult.onclick = () => {
+    const arr = inp.value.split(',').map((v) => Number(v));
+    console.log(calculator(arr, 3));
+};
+divs.onclick = () => {
+    const arr = inp.value.split(',').map((v) => Number(v));
+    console.log(calculator(arr, 4));
 };
 //# sourceMappingURL=calculator.js.map
