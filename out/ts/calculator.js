@@ -1,4 +1,3 @@
-"use strict";
 const [sum, sub, mult, divs, inp] = [
     document.getElementById('sumCalculator'), document.getElementById('subCalculator'),
     document.getElementById('multCalculator'), document.getElementById('divsCalculator'),
@@ -16,20 +15,44 @@ function calculator(numbers, operation) {
     return 0;
 }
 ;
+function handleImpression(value, operation) {
+    const sec = document.getElementById('outputCalculatorSec');
+    const p = document.createElement('p');
+    let op;
+    switch (operation) {
+        case 1:
+            op = `Sum: ${value}`;
+            break;
+        case 2:
+            op = `Subtraction: ${value}`;
+            break;
+        case 3:
+            op = `Multiplication: ${value}`;
+            break;
+        case 4:
+            op = `Division: ${value}`;
+            break;
+        default: op = `Error in operation.`;
+    }
+    if (op !== null || op !== undefined)
+        p.innerText = op;
+    sec.appendChild(p);
+}
+;
 sum.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
-    console.log(calculator(arr, 1));
+    handleImpression(calculator(arr, 1), 1);
 };
 sub.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
-    console.log(calculator(arr, 2));
+    handleImpression(calculator(arr, 2), 2);
 };
 mult.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
-    console.log(calculator(arr, 3));
+    handleImpression(calculator(arr, 3), 3);
 };
 divs.onclick = () => {
     const arr = inp.value.split(',').map((v) => Number(v));
-    console.log(calculator(arr, 4));
+    handleImpression(calculator(arr, 4), 4);
 };
 //# sourceMappingURL=calculator.js.map

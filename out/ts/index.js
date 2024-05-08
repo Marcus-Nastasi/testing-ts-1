@@ -1,4 +1,3 @@
-"use strict";
 function showHello() {
     const section = document.getElementById('secHeaderTop');
     const p = document.createElement('p');
