@@ -681,12 +681,37 @@ video {
   height: 24rem;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
+.h-36 {
+  height: 9rem;
+}
+
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-4\/5 {
+  height: 80%;
+}
+
 .w-screen {
   width: 100vw;
 }
 
 .w-1\/2 {
   width: 50%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-4\/5 {
+  width: 80%;
 }
 
 .transform {
@@ -789,6 +814,10 @@ video {
   padding-top: 7rem;
 }
 
+.pt-6 {
+  padding-top: 1.5rem;
+}
+
 .text-center {
   text-align: center;
 }
@@ -810,6 +839,10 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .italic {
