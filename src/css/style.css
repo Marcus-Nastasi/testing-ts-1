@@ -1,15 +1,18 @@
 .slideLeft {
    animation-name: slideLeft;
    animation-duration: 1s;
+   animation-play-state: paused;
 }
 
 .slideRigth {
    animation-name: slideRigth;
    animation-duration: 1s;
+   animation-play-state: paused;
 }
 
 @keyframes slideLeft {
    from {
+      position: absolute;
       margin-right: 8000px;
    }
 
@@ -18,6 +21,7 @@
 
 @keyframes slideRigth {
    from {
+      position: absolute;
       margin-left: 8000px;
    }
 
