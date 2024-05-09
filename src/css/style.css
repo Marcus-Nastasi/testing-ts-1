@@ -1,0 +1,26 @@
+.slideLeft {
+   animation-name: slideLeft;
+   animation-duration: 1s;
+}
+
+.slideRigth {
+   animation-name: slideRigth;
+   animation-duration: 1s;
+}
+
+@keyframes slideLeft {
+   from {
+      margin-right: 8000px;
+   }
+
+   to {}
+}
+
+@keyframes slideRigth {
+   from {
+      margin-left: 8000px;
+   }
+
+   to {}
+}
+
