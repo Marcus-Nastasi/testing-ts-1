@@ -30,7 +30,7 @@ function handleImpression(value, operation) {
             op = `Multiplication: ${value}`;
             break;
         case 4:
-            op = `Division: ${value}`;
+            op = `Division: ${value.toFixed(2)}`;
             break;
         default: op = `Error in operation.`;
     }
@@ -42,6 +42,7 @@ function handleImpression(value, operation) {
 function handleError(msg) {
     const sec = document.getElementById('outputCalculatorSec');
     const p = document.createElement('p');
+    p.classList.add('text-red-900', 'p-4', 'bg-red-400', 'm-2', 'rounded-md');
     p.innerText = `Erro: ${msg}`;
     sec.appendChild(p);
     setTimeout(() => sec.removeChild(p), 2000);
