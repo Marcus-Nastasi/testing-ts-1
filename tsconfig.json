@@ -5,7 +5,8 @@
       "rootDir": "./src",
       "outDir": "./out",
       "sourceMap": true,
-      "strict": false
+      "strict": false,
+      "noImplicitAny": false
    }
 }
 

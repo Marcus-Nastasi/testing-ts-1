@@ -12,8 +12,7 @@
 
 @keyframes slideLeft {
    from {
-      position: absolute;
-      margin-right: 8000px;
+      margin-right: 1000px;
    }
 
    to {}
@@ -21,8 +20,7 @@
 
 @keyframes slideRigth {
    from {
-      position: absolute;
-      margin-left: 8000px;
+      margin-left: 1000px;
    }
 
    to {}

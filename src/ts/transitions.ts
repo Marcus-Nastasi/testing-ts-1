@@ -1,14 +1,15 @@
 function slide(): void {
-   const slides: HTMLCollection = document.getElementsByClassName('slides');
-
-   const observer: IntersectionObserver = new window.IntersectionObserver(([e]) => {
-      if(e.isIntersecting) {
-         e.target.style.animationPlayState = 'running';
+   const slideL = document.getElementsByClassName('slideLeft');
+   const slideR = document.getElementsByClassName('slideRigth');
+   
+   const observer = new window.IntersectionObserver(([entry]) => {
+      if(entry.isIntersecting) {
+         console.log(1);
       }
    });
 
-   for(let i of slides) observer.observe(i);
+   for(let i of slideL) observer.observe(i);
+   for(let i of slideR) observer.observe(i);
 }
 slide();
-
 
