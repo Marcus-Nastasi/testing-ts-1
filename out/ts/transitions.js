@@ -5,6 +5,8 @@ function slide() {
             console.log(1);
         }
     });
+    for (let i of slides)
+        observer.observe(i);
 }
 slide();
 //# sourceMappingURL=transitions.js.map

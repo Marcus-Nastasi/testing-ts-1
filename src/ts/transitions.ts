@@ -6,6 +6,8 @@ function slide(): void {
          console.log(1);
       }
    });
+
+   for(let i of slides) observer.observe(i);
 }
 slide();
 

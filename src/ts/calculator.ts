@@ -5,10 +5,10 @@ const [ sum, sub, mult, divs, inp, clean ]: any = [
 ];
 
 function calculator(numbers: Array<number>, operation: number): number {
-   operation === 1 ? numbers.reduce((acm: number, numb: number): number => acm += numb) : 0;
-   operation === 2 ? numbers.reduce((acm: number, numb: number): number => acm -= numb) : 0;
-   operation === 3 ? numbers.reduce((acm: number, numb: number): number => acm *= numb) : 0;
-   operation === 4 ? numbers.reduce((acm: number, numb: number): number => acm /= numb) : 0;
+   if(operation === 1) return numbers.reduce((acm: number, numb: number): number => acm += numb);
+   if(operation === 2) return numbers.reduce((acm: number, numb: number): number => acm -= numb) ;
+   if(operation === 3) return numbers.reduce((acm: number, numb: number): number => acm *= numb);
+   if(operation === 4) return numbers.reduce((acm: number, numb: number): number => acm /= numb);
    return 0;
 };
 
