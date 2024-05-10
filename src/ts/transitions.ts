@@ -1,13 +1,18 @@
 function slide(): void {
-   const slides = document.getElementsByClassName('slide');
+   const slides = document.getElementsByClassName('slide')[0];
+   const [ slideL, slideR ]: any = [ 
+      document.getElementsByClassName('slideLeft'),
+      document.getElementsByClassName('slideRigth') 
+   ];
    
    const observer = new window.IntersectionObserver(([entry]) => {
       if(entry.isIntersecting) {
-         console.log(1);
+         slideL[0].style.animationPlayState = 'running';
+         slideR[0].style.animationPlayState = 'running';
       }
    });
 
-   for(let i of slides) observer.observe(i);
+   observer.observe(slides);
 }
 slide();
 
