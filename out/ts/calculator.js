@@ -4,14 +4,10 @@ const [sum, sub, mult, divs, inp, clean] = [
     document.getElementById('inputNumbers'), document.getElementById('cleanCalculator')
 ];
 function calculator(numbers, operation) {
-    if (operation === 1)
-        return numbers.reduce((acm, numb) => acm += numb);
-    if (operation === 2)
-        return numbers.reduce((acm, numb) => acm -= numb);
-    if (operation === 3)
-        return numbers.reduce((acm, numb) => acm *= numb);
-    if (operation === 4)
-        return numbers.reduce((acm, numb) => acm /= numb);
+    operation === 1 ? numbers.reduce((acm, numb) => acm += numb) : 0;
+    operation === 2 ? numbers.reduce((acm, numb) => acm -= numb) : 0;
+    operation === 3 ? numbers.reduce((acm, numb) => acm *= numb) : 0;
+    operation === 4 ? numbers.reduce((acm, numb) => acm /= numb) : 0;
     return 0;
 }
 ;

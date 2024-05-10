@@ -5,17 +5,17 @@ const [ sum, sub, mult, divs, inp, clean ]: any = [
 ];
 
 function calculator(numbers: Array<number>, operation: number): number {
-   if(operation === 1) return numbers.reduce((acm: number, numb: number): number => acm += numb)
-   if(operation === 2) return numbers.reduce((acm: number, numb: number): number => acm -= numb)
-   if(operation === 3) return numbers.reduce((acm: number, numb: number): number => acm *= numb)
-   if(operation === 4) return numbers.reduce((acm: number, numb: number): number => acm /= numb)
+   operation === 1 ? numbers.reduce((acm: number, numb: number): number => acm += numb) : 0;
+   operation === 2 ? numbers.reduce((acm: number, numb: number): number => acm -= numb) : 0;
+   operation === 3 ? numbers.reduce((acm: number, numb: number): number => acm *= numb) : 0;
+   operation === 4 ? numbers.reduce((acm: number, numb: number): number => acm /= numb) : 0;
    return 0;
 };
 
 function handleImpression(value: number, operation: number): void {
    const sec: HTMLElement = document.getElementById('outputCalculatorSec');
    const p: HTMLParagraphElement = document.createElement('p');
-   let op: string; 
+   let op: string;
    switch(operation) {
       case 1: op = `Sum: ${value}`;
          break;
