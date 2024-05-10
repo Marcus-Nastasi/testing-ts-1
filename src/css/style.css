@@ -1,10 +1,12 @@
 .slideLeft {
+   opacity: 0;
    animation-name: slideLeft;
    animation-duration: 2s;
    animation-play-state: paused;
 }
 
 .slideRigth {
+   opacity: 0;
    animation-name: slideRigth;
    animation-duration: 2s;
    animation-play-state: paused;
