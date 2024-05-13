@@ -1,0 +1,25 @@
+#carrossel {
+
+}
+
+.carrossel {
+   opacity: 0;
+   animation: moveUp 5s;
+   animation-iteration-count: infinite;
+   transition: all ease-in-out 500ms;
+}
+
+@keyframes moveUp {
+   0% {
+      opacity: 0;
+   }
+
+   50% {
+      opacity: 1;
+   }
+
+   100% {
+      opacity: 0;
+   }
+}
+
