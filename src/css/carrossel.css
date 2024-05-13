@@ -1,11 +1,14 @@
-#carrossel {
-
-}
-
-.carrossel {
+.mvUp {
    opacity: 0;
-   animation: moveUp 20s infinite;
+   animation: moveUp 2s;
    transition: all ease-in-out 500ms;
+   animation-play-state: paused;
+}
+.mvOut {
+   opacity: 0;
+   animation: moveOut 2s;
+   transition: all ease-in-out 500ms;
+   animation-play-state: paused;
 }
 
 @keyframes moveUp {
@@ -13,7 +16,13 @@
       opacity: 0;
    }
 
-   50% {
+   100% {
+      opacity: 1;
+   }
+}
+
+@keyframes moveOut {
+   0% {
       opacity: 1;
    }
 
@@ -21,4 +30,3 @@
       opacity: 0;
    }
 }
-
