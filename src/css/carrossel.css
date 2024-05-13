@@ -1,14 +1,14 @@
-.mvUp {
+.carr {
    opacity: 0;
+}
+
+.mvUp {
    animation: moveUp 2s;
    transition: all ease-in-out 500ms;
-   animation-play-state: paused;
 }
 .mvOut {
-   opacity: 0;
    animation: moveOut 2s;
    transition: all ease-in-out 500ms;
-   animation-play-state: paused;
 }
 
 @keyframes moveUp {
