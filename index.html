@@ -6,6 +6,7 @@
    <title>Testing TS</title>
    <link rel="stylesheet" href="./src/css/out.css">
    <link rel="stylesheet" href="./src/css/style.css">
+   <link rel="stylesheet" href="./src/css/carrossel.css">
 </head>
 <body class="overflow-x-hidden">
    <header class="w-screen h-28 p-10 flex items-center justify-center bg-slate-700 text-slate-200">
@@ -65,16 +66,22 @@
 
    <section class="w-screen min-h-screen max-h-fit bg-purple-950">
       <section class="flex flex-col items-center p-2 h-screen">
-         <h2 class="text-center my-4 text-3xl font-semibold text-slate-300">Terceira sec</h2>
+         <h2 class="text-center my-4 text-3xl font-semibold text-slate-300">Carrossel</h2>
 
          <section class="flex flex-col justify-evenly w-11/12 h-5/6">
-            <section class="p-3 rounded-md bg-slate-300">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eligendi voluptatibus consectetur atque voluptate cum hic laudantium doloremque, asperiores eos sed, magnam architecto corporis cumque ab doloribus inventore numquam odio.
-            </section>
+            <div id="carrossel" class="flex items-center justify-center w-full">
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-slate-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-red-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-blue-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-yellow-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-green-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-purple-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-gray-600"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-orange-500"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-stone-800"></div>
+               <div class="w-11/12 min-h-96 max-h-fit absolute bg-emerald-600"></div>
 
-            <section class="p-3 rounded-md bg-slate-300">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, officia perferendis ducimus esse architecto vero assumenda pariatur ab voluptatem aliquid deleniti dolorum unde sed veniam expedita numquam deserunt impedit exercitationem!
-            </section>
+            </div>
          </section>
       </section>
    </section>
