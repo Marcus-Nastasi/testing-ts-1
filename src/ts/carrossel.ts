@@ -14,9 +14,17 @@ const movetwo = () => {
    setTimeout(() => {
       mv2.classList.remove('mvUp');
       mv2.classList.add('mvOut');
-      moveOne();
+      moveThree();
    }, 1000);
 };
 
+const moveThree = () => {
+   mv3.classList.add('mvUp');
+   setTimeout(() => {
+      mv3.classList.remove('mvUp');
+      mv3.classList.add('mvOut');
+      moveOne();
+   }, 1000);
+};
 moveOne();
 
