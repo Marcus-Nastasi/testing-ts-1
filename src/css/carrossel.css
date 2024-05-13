@@ -4,8 +4,7 @@
 
 .carrossel {
    opacity: 0;
-   animation: moveUp 5s;
-   animation-iteration-count: infinite;
+   animation: moveUp 20s infinite;
    transition: all ease-in-out 500ms;
 }
 
